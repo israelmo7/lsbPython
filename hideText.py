@@ -26,7 +26,7 @@ def enc(im):
 	text = raw_input("Enter the Text: ")
 	cnt = 0
 	pix = im.load() # Pixels
-	s = "".join([bin(ord(i))[2:] for i in text])
+	s = "".join([bin(ord(i))[2:].zfill(7) for i in text])
 	s += ("0"*7)
 
 	for i in range(im.size[0]):
